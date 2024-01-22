@@ -1,0 +1,44 @@
+[0.043s] Invoking command in '/home/carlos/introrob_ws/src/bumpstop/build/bumpstop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carlos/introrob_ws/install/joy_teleop:/home/carlos/introrob_ws/install/mouse_teleop:/home/carlos/introrob_ws/install/launch_pal:/home/carlos/introrob_ws/install/key_teleop:/opt/ros/humble /usr/bin/cmake /home/carlos/introrob_ws/src/bumpstop -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/carlos/introrob_ws/src/bumpstop/install/bumpstop
+[0.276s] -- The C compiler identification is GNU 11.3.0
+[0.444s] -- The CXX compiler identification is GNU 11.3.0
+[0.461s] -- Detecting C compiler ABI info
+[0.588s] -- Detecting C compiler ABI info - done
+[0.604s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.605s] -- Detecting C compile features
+[0.606s] -- Detecting C compile features - done
+[0.612s] -- Detecting CXX compiler ABI info
+[0.764s] -- Detecting CXX compiler ABI info - done
+[0.780s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.780s] -- Detecting CXX compile features
+[0.781s] -- Detecting CXX compile features - done
+[0.810s] -- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.961s] Invoked command in '/home/carlos/introrob_ws/src/bumpstop/build/bumpstop' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/carlos/introrob_ws/install/joy_teleop:/home/carlos/introrob_ws/install/mouse_teleop:/home/carlos/introrob_ws/install/launch_pal:/home/carlos/introrob_ws/install/key_teleop:/opt/ros/humble /usr/bin/cmake /home/carlos/introrob_ws/src/bumpstop -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/carlos/introrob_ws/src/bumpstop/install/bumpstop
+[0.965s] Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 67, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1860, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/build.py", line 59, in build
+    rc = await extension.build(
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 87, in build
+    rc = await self._reconfigure(args, env)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/build.py", line 182, in _reconfigure
+    buildfile = get_buildfile(cmake_cache)
+  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/__init__.py", line 112, in get_buildfile
+    if 'Ninja' in generator:
+TypeError: argument of type 'NoneType' is not iterable
